@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+header{
+    text-align: center;
+    padding: 5em;
+    border: 1px solid;
+}
+
+.titulo-site{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 70px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lista-task{
+}
+
+.item-lista-task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vh;
+    margin: 1em;
+    gap: 1em;
+    padding: 0.5em;
+    box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75);
+    background-color: rgb(255, 255, 255);
+}
+
+.task-item{
+    width: 100%;
+}
+
+.button-remove-task{
+    border: none;
+}
+
+.imagem{
+    width: 30px;
+}
+
+.input-write-task{
+    display: flex;
+    justify-content: space-between;
+    width: 100vh;
+    margin: 1em;
+    padding: 0.5em;
+    box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75);
+}
+
+.input-task{
+    width: 94%;
+    height: 5em;
+    font-size: 20px;
+}
+
+.button-add-task{
+    width: 5%;
+}
+
