@@ -1,6 +1,8 @@
 let sectionTask = document.querySelector('.task');
 let listaTask = document.querySelector('.lista-task');
+let liTask = document.querySelector('.item-lista-task');
 let buttonAdd = document.querySelector('.button-add-task');
+let task = document.querySelector('.task-item');
 let inputTask = document.querySelector('.input-task');
 let count = 0;
 
@@ -43,7 +45,9 @@ const buttonAddTask = () => {
             inputTask.value = '';
             }
         }    
-    )   
+
+    )
+    
 }
 
 const removeTask  = (evento) => {
@@ -55,8 +59,7 @@ const removeTask  = (evento) => {
 const validationTask = () => {
     if(inputTask.value === ''){
         alert('Digite uma task!!')
-    }
-    else{
+    } else{
         createTask();
         inputTask.value = '';
     } 
