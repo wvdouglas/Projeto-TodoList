@@ -1,8 +1,6 @@
 let sectionTask = document.querySelector('.task');
 let listaTask = document.querySelector('.lista-task');
-let liTask = document.querySelector('.item-lista-task');
 let buttonAdd = document.querySelector('.button-add-task');
-let task = document.querySelector('.task-item');
 let inputTask = document.querySelector('.input-task');
 let count = 0;
 
@@ -13,13 +11,15 @@ function createElementTask(element, params, className){
 }
 
 function createTask(){
-    var listTask = document.createElement('li');
+    let liTask = document.querySelector('.item-lista-task');
+    let listTask = document.createElement('li');
     createElementTask(listaTask, listTask, 'item-lista-task')
 
-    var itemTask = document.createElement('p');
+    let task = document.querySelector('.task-item');
+    let itemTask = document.createElement('p');
     createElementTask(listTask, itemTask, 'task-item')
 
-    var createButton = document.createElement('button');
+    let createButton = document.createElement('button');
     createElementTask(listTask, createButton, 'button-remove-task')
     createButton.onclick = (event) => {
         removeTask(event)
@@ -41,11 +41,9 @@ const buttonAddTask = () => {
         }else{
             alert('Lista Cheia!!')
             inputTask.value = '';
-        }
+            }
         }    
-
-    )
-    
+    )   
 }
 
 const removeTask  = (evento) => {
