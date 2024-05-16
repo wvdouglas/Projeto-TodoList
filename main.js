@@ -41,11 +41,9 @@ const buttonAddTask = () => {
         }else{
             alert('Lista Cheia!!')
             inputTask.value = '';
-        }
+            }
         }    
-
-    )
-    
+    )    
 }
 
 const removeTask  = (evento) => {
@@ -57,8 +55,7 @@ const removeTask  = (evento) => {
 const validationTask = () => {
     if(inputTask.value === ''){
         alert('Digite uma task!!')
-    }
-    else{
+    } else{
         createTask();
         inputTask.value = '';
     } 
