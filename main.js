@@ -17,7 +17,7 @@ function createTask(){
     createElementTask(listaTask, listTask, 'item-lista-task')
 
     var itemTask = document.createElement('p');
-    createElementTask(listTask,itemTask, 'task-item')
+    createElementTask(listTask, itemTask, 'task-item')
 
     var createButton = document.createElement('button');
     createElementTask(listTask, createButton, 'button-remove-task')
@@ -34,11 +34,18 @@ function createTask(){
 }
 
 const buttonAddTask = () => {
-    buttonAdd.addEventListener('click', () =>{
-        count = count+1;
-        validationTask();
+    buttonAdd.addEventListener('click', () =>{  
+        if(count < 6){
+            count++
+            validationTask();
+        }else{
+            alert('Lista Cheia!!')
+            inputTask.value = '';
         }
+        }    
+
     )
+    
 }
 
 const removeTask  = (evento) => {
@@ -53,8 +60,8 @@ const validationTask = () => {
     }
     else{
         createTask();
-    }
-    
+        inputTask.value = '';
+    } 
 }
 
 buttonAddTask();
